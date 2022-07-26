@@ -278,7 +278,7 @@ export async function estimateSend(
           args: args,
           // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
           deposit: 1,
-          gas: "50000000000000",
+          gas: "100000000000000",
         }
       },
     ],

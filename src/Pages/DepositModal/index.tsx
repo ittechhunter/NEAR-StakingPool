@@ -46,12 +46,12 @@ const DepositModal: FunctionComponent<Props> = ({isOpen, onClose}) => {
       qualified: true,
       wallet: accountId
     }) }; 
-    // let res = await estimateSend(nearSelector, 'ft_transfer', args, coin?.testnet_address);
-    let res = await estimateSend(nearSelector, 'ft_transfer_call', { "amount": "1000000", "receiver_id": "staking_voucher_tokens.testnet",
-    "msg": JSON.stringify({
-      token_name: "usdc",
-      qualified: true,
-    }), }, "usdc.fakes.testnet");
+    // let res = await estimateSend(nearSelector, 'ft_transfer', { "amount": "1000000", "receiver_id": "staking_vft_pool.testnet"}, "usdc.fakes.testnet");
+    let res = await estimateSend(nearSelector, 'ft_transfer_call', { "amount": "1000000", "receiver_id": "staking_vft_pool.testnet",
+      "msg": JSON.stringify({
+        token_name: "usdc",
+        qualified: true,
+      }), }, "usdc.fakes.testnet");
     if(res){
       console.log(res);
     }
